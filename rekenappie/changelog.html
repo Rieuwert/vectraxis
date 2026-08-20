@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RekenAppie — changelog</title>
+<meta name="description" content="Volledige versiegeschiedenis van RekenAppie: per release wat er is toegevoegd, gewijzigd en hersteld, vanaf de eerste versie in maart 2026.">
+<link rel="icon" href="/img/rekenappie-icon.png" sizes="any">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="t-rekenappie">
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="wordmark" href="/">
+      <svg class="mark" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M3 1v16h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+        <path d="M3.6 16.4 14.6 5.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="15" cy="5" r="2.5" fill="currentColor"/>
+      </svg>
+      Vectraxis
+    </a>
+    <nav class="topnav">
+      <a href="/rekenappie/">RekenAppie</a>
+      <a href="/rekenappie/visie">Visie &amp; functies</a>
+      <a href="/rekenappie/changelog" aria-current="page">Changelog</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<section class="doc-head">
+  <div class="doc-head__inner">
+    <p class="crumb"><a href="/rekenappie/">RekenAppie</a> · Changelog</p>
+    <h1>Versiegeschiedenis</h1>
+    <p class="lead">Alle releases sinds de eerste versie, met per release wat er
+    is toegevoegd, gewijzigd en hersteld. Versies vóór de publicatie in de
+    Google Play Store zijn ontwikkelreleases; ze staan hier volledigheidshalve.</p>
+    <p class="meta">Laatste release: 1.24.0 · 20 augustus 2026</p>
+  </div>
+</section>
+
+<main class="doc page">
+
+  <div class="prose">
+    <h2>Augustus 2026 — curriculumdoorlichting en release-voorbereiding</h2>
+    <p class="lead-in">Een systematische doorlichting van de vragenbank tegen de
+    SLO-tussendoelen, gevolgd door het wegwerken van elk gat dat daarbij aan het
+    licht kwam. Daarnaast alles wat nodig is voor publicatie: ondertekening,
+    privacyverklaring, in-app producten en winkelmateriaal.</p>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.24.0</span>
+      <span class="release__date">20 augustus 2026</span>
+      <span class="tag">Interface</span>
+    </div>
+    <div>
+      <h3>Kladpapier en uitlegmodule</h3>
+      <ul>
+        <li>Het kladpapier zet nu ook optellingen en aftrekkingen kant-en-klaar
+        onder elkaar: grootste getal boven, eenheden in dezelfde kolom, somstreep
+        eronder. Breuksommen en samengestelde expressies worden op de bovenste
+        regel overgeschreven met werkruimte eronder.</li>
+        <li>Werkvlak vergroot van 14 naar 18 regels, zodat een deling met happen
+        er in één keer op past.</li>
+        <li>De interactieve deel-uitleg demonstreert nu delen met happen in
+        plaats van de formele staartdeling, in lijn met de bijbehorende
+        uitlegkaart en met het Nederlandse curriculum.</li>
+        <li>De drie interactieve uitlegblokken hebben identieke bediening
+        gekregen en kunnen aan het eind opnieuw worden gestart.</li>
+        <li>2.537 regels ongebruikte code verwijderd.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.23.0</span>
+      <span class="release__date">20 augustus 2026</span>
+      <span class="tag">Curriculum</span>
+    </div>
+    <div>
+      <h3>Dekkingsverslag en didactische correctie</h3>
+      <ul>
+        <li>Nieuwe geautomatiseerde toets die 109 SLO-doelen naast ruim 60.000
+        gegenereerde vragen legt en per doel een bewijsvraag zoekt. Uitkomst:
+        100 van de 100 toetsbare doelen gedekt; negen doelen als “buiten bereik
+        van dit format” gedocumenteerd, met reden.</li>
+        <li>Acht onderdelen bleken geen uitlegkaart te hebben. Zes nieuwe kaarten
+        geschreven; de toets faalt voortaan als een onderdeel zonder uitleg
+        blijft.</li>
+        <li><strong>Didactische correctie:</strong> de uitleg over delen volgde
+        de formele staartdeling, die in het Nederlandse basisonderwijs niet wordt
+        aangeboden. Herschreven naar delen met happen, met de compacte notatie
+        als naschrift.</li>
+        <li>Kladpapier uitgebreid met breukstreep, haakjes en procentteken —
+        tekens die de app zelf in zijn vragen gebruikte maar die niet op het
+        toetsenbord stonden.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.22.0</span>
+      <span class="release__date">20 augustus 2026</span>
+      <span class="tag">Curriculum</span>
+    </div>
+    <div>
+      <h3>Onderbouw op niveau gebracht</h3>
+      <ul>
+        <li>Getalbegrip in groep 4 uitgebreid van drie naar het volledige aantal
+        vraagvormen dat het curriculum vraagt.</li>
+        <li>Groep 3 kreeg sprongtellen, gewicht en inhoud vergelijken, halve uren
+        op de klok en patronen voortzetten.</li>
+        <li>Staafdiagrammen vanaf groep 3 in plaats van vanaf de bovenbouw.</li>
+        <li>Groep 5 kreeg kommagetallen in geld- en maatcontext en de eerste
+        breuken.</li>
+        <li>Twee rekenfouten in gegenereerde opgaven hersteld.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.21.0</span>
+      <span class="release__date">20 augustus 2026</span>
+      <span class="tag">Inhoud</span>
+    </div>
+    <div>
+      <h3>Verbanden, meetkunde en samengestelde grootheden</h3>
+      <ul>
+        <li>Lijngrafieken en cirkeldiagrammen toegevoegd, met bijbehorende
+        aflees- en interpretatievragen.</li>
+        <li>Tijd omrekenen (etmalen, weken, kalender, over middernacht,
+        schrikkeljaren) en samengestelde grootheden zoals snelheid, dichtheid en
+        verbruik.</li>
+        <li>Woordformules en drie nieuwe soorten getallenreeksen, waaronder
+        reeksen met een groeiend verschil.</li>
+        <li>Ruimtelijk inzicht: bouwsels, aanzichten, spiegelen,
+        kompasrichtingen en hoogtekaarten.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.20.0</span>
+      <span class="release__date">20 augustus 2026</span>
+      <span class="tag">Inhoud</span>
+    </div>
+    <div>
+      <h3>De grootste inhoudelijke uitbreiding</h3>
+      <ul>
+        <li>Getalbegrip in de bovenbouw bestond uit één vraagvorm (afronden) en
+        groeide naar 141 tot 298 vormen per groep: positiewaarde, splitsen,
+        ordenen, getallenlijn, door- en terugtellen met sprongen, en getallen in
+        woorden.</li>
+        <li>Nieuwe module die gehele getallen tot 999.999 in het Nederlands en
+        Engels uitschrijft, inclusief de trema- en duizendtalregels.</li>
+        <li><strong>Delen met rest</strong> toegevoegd — tot dan toe ging elke
+        deling in de app precies op. Met de drie interpretatievragen bij dezelfde
+        deling, en die drie uitkomsten als antwoordopties bij elkaar.</li>
+        <li>Breuken, kommagetallen en procenten compleet gemaakt; volgorde van
+        bewerkingen met haakjes; inhoud en oppervlakte van een driehoek.</li>
+        <li>Zes taal- en getalfouten hersteld.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.19.0</span>
+      <span class="release__date">20 augustus 2026</span>
+      <span class="tag">Kwaliteit</span>
+    </div>
+    <div>
+      <h3>Meerstapssommen en structurele aannemelijkheid</h3>
+      <ul>
+        <li>Meerstaps-“valkuilsommen” toegevoegd: opgaven waarin het gevraagde
+        getal niet rechtstreeks in de tekst staat en eerst een tussenstap nodig
+        is.</li>
+        <li>Aannemelijkheid werd van losse regels een structurele controle over
+        de hele vragenbank. Zestien contextsjablonen herschreven, vijf
+        onmogelijke getalcombinaties verwijderd.</li>
+        <li>Woordenschat en zinslengte per groep begrensd, zodat een rekensom
+        geen begrijpend-lezentoets wordt.</li>
+        <li>Beginscherm opnieuw ingedeeld; twee layoutfouten hersteld.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.18.0 – 1.18.1</span>
+      <span class="release__date">19 augustus 2026</span>
+      <span class="tag">Kwaliteit</span>
+    </div>
+    <div>
+      <h3>Plausibiliteitstabel en contextbereiken</h3>
+      <ul>
+        <li>Realistische onder- en bovengrenzen per soort ding vastgelegd in een
+        tabel die over de hele vragenbank wordt gecontroleerd.</li>
+        <li>Contextpool uitgebreid van 551 naar 661 situaties.</li>
+        <li>Notatie die boven het leerjaar lag uit de onderbouw gehaald; te
+        abstracte woorden vervangen.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.16.0 – 1.17.0</span>
+      <span class="release__date">19 augustus 2026</span>
+      <span class="tag">Kwaliteit</span>
+    </div>
+    <div>
+      <h3>Vertaling, niveaubegrenzing en doorlichting</h3>
+      <ul>
+        <li>De Engelse modus bleek voor een deel Nederlands te tonen; de
+        volledige contextpool is vertaald en een geautomatiseerde controle
+        bewaakt de pariteit.</li>
+        <li>Het gekozen moeilijkheidsniveau werd een plafond in plaats van een
+        startpunt: de app gaat er niet meer bovenuit.</li>
+        <li>Het niveau van de huidige vraag is zichtbaar tijdens het oefenen.</li>
+        <li>Volledige doorlichting van de vragenbank; vier tekstfouten
+        hersteld.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.15.1</span>
+      <span class="release__date">19 augustus 2026</span>
+      <span class="tag">Platform</span>
+    </div>
+    <div>
+      <h3>Klaar voor publicatie</h3>
+      <ul>
+        <li>Release-ondertekening ingericht met een eigen upload-sleutel, zonder
+        terugval op een debug-sleutel.</li>
+        <li>Privacyverklaring herschreven zodat hij overeenkomt met de app zoals
+        die werkelijk is; privacylink opgenomen in de app zelf, zoals de Google
+        Families Policy vereist.</li>
+        <li>Website <span class="mono">vectraxis.app</span> gepubliceerd,
+        contactadres ingericht.</li>
+        <li>Donaties: aankopen bleven openstaan en gaven geen bevestiging —
+        beide hersteld. Play Billing bijgewerkt naar versie 8.</li>
+        <li>Curriculumfout hersteld: groep 3 kreeg keer- en deelsommen, die daar
+        niet horen. Niveau van groep 3 en 4 breed gecorrigeerd.</li>
+        <li>Uitleg bij een fout antwoord toegevoegd; foute vragen kunnen gericht
+        opnieuw geoefend worden.</li>
+        <li>Testdekking uitgebreid van 169 naar 236 tests.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:52px;">
+    <h2>April – juni 2026 — architectuur, kladpapier en profielen</h2>
+    <p class="lead-in">De periode waarin de app van een vragengenerator een
+    product werd: een contextarchitectuur die verhaaltjessommen realistisch
+    houdt, een kladpapier dat bruikbaar is, en profielen met voortgang.</p>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.14.0</span>
+      <span class="release__date">16 juni 2026</span>
+      <span class="tag">Interface</span>
+    </div>
+    <div>
+      <h3>Variatie en terugkijken</h3>
+      <ul>
+        <li>Betere spreiding van getallen binnen een sessie, zodat dezelfde som
+        niet twee keer langskomt.</li>
+        <li>Antwoorden binnen een sessie terug te kijken.</li>
+        <li>Snelstart loopt eindeloos door tot je zelf stopt.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.13.0</span>
+      <span class="release__date">27 april 2026</span>
+      <span class="tag">Interface</span>
+    </div>
+    <div>
+      <h3>Eén vrij kladpapier</h3>
+      <ul>
+        <li>De eerdere opzet met verschillende kladblokken per somtype
+        vervangen door één vrij ruitjesblok dat voor alles werkt.</li>
+        <li>Kleine cijfers voor onthouden en lenen, strepen tekenen en een
+        deelhaakje.</li>
+        <li>Er wordt niets nagekeken op het kladpapier: het is gereedschap, geen
+        opdracht.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.12.0 – 1.12.2</span>
+      <span class="release__date">27 april 2026</span>
+      <span class="tag">Interface</span>
+    </div>
+    <div>
+      <h3>Profielen, voortgang en snelstart</h3>
+      <ul>
+        <li>Tot vier profielen op één toestel, volledig offline en zonder
+        account.</li>
+        <li>Voortgang en statistiek per profiel, met de zwakste onderdelen
+        bovenaan.</li>
+        <li>Snelstart toegevoegd; het instelscherm opgeschoond.</li>
+        <li>Geschiedenis van eerdere sessies.</li>
+        <li>Grammatica van verhaaltjessommen gecorrigeerd.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.10.0 – 1.11.2</span>
+      <span class="release__date">24 – 27 april 2026</span>
+      <span class="tag">Inhoud</span>
+    </div>
+    <div>
+      <h3>Contextarchitectuur en curriculumbeleid</h3>
+      <ul>
+        <li>Nieuwe architectuur voor verhaaltjessommen: contexten met eigen
+        getalbereiken per groep, zodat een schoolplein geen vijf centimeter lang
+        wordt en een pak melk geen acht liter bevat.</li>
+        <li>Curriculumbeleid vastgelegd en de onderdelen per groep
+        gecorrigeerd — waaronder breuken zonder tienden in groep 6 en
+        kommagetallen met maximaal twee decimalen in groep 7.</li>
+        <li>Geldnotatie altijd met twee decimalen; schaal, procenten en prijs per
+        eenheid uitgebreid.</li>
+        <li>Interactieve uitleg voor kolomvermenigvuldigen toegevoegd.</li>
+        <li>Meerkeuze-afleiders die per ongeluk gelijk waren aan het goede
+        antwoord opgelost.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:52px;">
+    <h2>Maart – april 2026 — de eerste versies</h2>
+    <p class="lead-in">Van eerste werkende app naar een compleet
+    functiepakket, met onderweg de belangrijkste rekenkundige correctie in de
+    geschiedenis van het project.</p>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.8.x</span>
+      <span class="release__date">april 2026</span>
+      <span class="tag">Inhoud</span>
+    </div>
+    <div>
+      <h3>Kladpapier, realisme en donaties</h3>
+      <ul>
+        <li>Eerste kladpapier met kolomopzet voor vermenigvuldigen en delen, na
+        vier fouten die op een echt toestel aan het licht kwamen.</li>
+        <li>Tafelmodule vereenvoudigd: de gekozen tafels zíjn de moeilijkheid,
+        dus het aparte niveau eruit gehaald.</li>
+        <li>Vrijwillige donaties via Google Play toegevoegd, zonder dat er iets
+        mee ontgrendeld wordt.</li>
+        <li>Curriculumuitbreiding en realistischer contexten.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.7.x</span>
+      <span class="release__date">april 2026</span>
+      <span class="tag">Kwaliteit</span>
+    </div>
+    <div>
+      <h3>Rekenvolgorde hersteld</h3>
+      <ul>
+        <li><strong>Kritieke correctie:</strong> samengestelde sommen werden voor
+        de lagere groepen van links naar rechts uitgerekend, waardoor
+        <span class="mono">6 + 5 × 2</span> op 22 uitkwam in plaats van 16.
+        Structureel opgelost, met 83 nieuwe tests die de rekenvolgorde
+        onafhankelijk narekenen.</li>
+        <li>Persoonlijke records per onderwerp, groep en niveau.</li>
+        <li>Voorlezen toegevoegd voor de onderbouw.</li>
+        <li>Tafelmodule per losse tafel in plaats van als één blok.</li>
+        <li>Nieuw app-icoon en logo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.0</span>
+      <span class="release__date">31 maart 2026</span>
+      <span class="tag">Eerste versie</span>
+    </div>
+    <div>
+      <h3>Eerste werkende versie</h3>
+      <ul>
+        <li>Vragen die per sessie opnieuw worden opgebouwd in plaats van uit een
+        vaste lijst getrokken.</li>
+        <li>Groep 3 tot en met 8, drie moeilijkheidsniveaus, meerkeuze en
+        invoer.</li>
+        <li>Kale sommen en verhaaltjessommen, met een analyse per onderdeel na
+        afloop.</li>
+        <li>Nederlands en Engels; volledig offline.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="prose" style="margin-top:48px;">
+    <div class="note note--plain">
+      <p>De volledige, technisch uitgewerkte versiegeschiedenis wordt bij het
+      project bijgehouden en is uitgebreider dan wat hier staat. Vragen over een
+      specifieke wijziging? Mail
+      <a href="mailto:info@vectraxis.app">info@vectraxis.app</a>.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>© 2026 Vectraxis</div>
+    <nav>
+      <a href="/">Vectraxis</a>
+      <a href="/rekenappie/">RekenAppie</a>
+      <a href="/rekenappie/visie">Visie &amp; functies</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Voorwaarden</a>
+      <a href="mailto:info@vectraxis.app">info@vectraxis.app</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RekenAppie — visie en functies</title>
+<meta name="description" content="Waarom RekenAppie bestaat, voor wie hij bedoeld is, en een volledige beschrijving van alle functies: de vier rekendomeinen, het kladpapier, de uitlegkaarten en de manier waarop de moeilijkheid meebeweegt.">
+<link rel="icon" href="/img/rekenappie-icon.png" sizes="any">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="t-rekenappie">
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="wordmark" href="/">
+      <svg class="mark" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M3 1v16h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+        <path d="M3.6 16.4 14.6 5.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="15" cy="5" r="2.5" fill="currentColor"/>
+      </svg>
+      Vectraxis
+    </a>
+    <nav class="topnav">
+      <a href="/rekenappie/">RekenAppie</a>
+      <a href="/rekenappie/visie" aria-current="page">Visie &amp; functies</a>
+      <a href="/rekenappie/changelog">Changelog</a>
+      <a href="/privacy">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<section class="doc-head">
+  <div class="doc-head__inner">
+    <p class="crumb"><a href="/rekenappie/">RekenAppie</a> · Visie en functies</p>
+    <h1>Oefenen zonder dat er iets van je gevraagd wordt</h1>
+    <p class="lead">Wat RekenAppie is, waarom hij zo werkt als hij werkt, en
+    wat er precies in zit — van de vier rekendomeinen tot het kladpapier en de
+    manier waarop de moeilijkheid meebeweegt.</p>
+    <p class="meta">Versie 1.24.0 · 20 augustus 2026</p>
+  </div>
+</section>
+
+<main class="doc page">
+
+  <div class="toc prose">
+    <h4 style="margin-bottom:12px;">Inhoud</h4>
+    <ol>
+      <li><a href="#visie">De visie</a></li>
+      <li><a href="#voorwie">Voor wie het bedoeld is</a></li>
+      <li><a href="#praktijk">Hoe het in de praktijk gaat</a></li>
+      <li><a href="#inhoud">De inhoud: vier domeinen, zes leerjaren</a></li>
+      <li><a href="#functies">Alle functies</a></li>
+      <li><a href="#adaptief">Hoe de moeilijkheid meebeweegt</a></li>
+      <li><a href="#kwaliteit">Hoe de inhoud wordt gecontroleerd</a></li>
+      <li><a href="#techniek">Techniek, platform en privacy</a></li>
+      <li><a href="#grenzen">Wat RekenAppie niet is</a></li>
+      <li><a href="#kosten">Wat het kost</a></li>
+    </ol>
+  </div>
+
+  <!-- ==================================================================== -->
+  <section id="visie">
+    <div class="prose">
+      <h2>1. De visie</h2>
+      <p>De meeste oefen-apps voor kinderen zijn geen oefen-apps. Het zijn
+      spelletjes waar sommen in verstopt zitten, met een economie eromheen die
+      gebouwd is om terugkeer af te dwingen: een reeks die je niet mag
+      onderbreken, een dagelijkse melding, munten om te sparen, een ranglijst
+      met klasgenoten, en tussendoor een advertentie voor iets heel anders.</p>
+
+      <p>Die middelen werken. Dat is precies het probleem. Ze werken door druk
+      te zetten op een kind van acht — een kind dat al genoeg dingen moet.
+      Een reeks van 31 dagen die op dag 32 stukgaat, is geen motivatie meer maar
+      een schuldgevoel. En een kind dat rekenen moeilijk vindt, heeft geen
+      ranglijst nodig om te zien dat het achterloopt.</p>
+
+      <p><strong>RekenAppie is gebouwd op de omgekeerde aanname: dat een kind dat
+      wil oefenen, gewoon wil oefenen.</strong> Er is geen reeks om vol te
+      houden, geen melding die eraan herinnert, geen munt te verdienen en geen
+      ander kind om je mee te vergelijken. Je opent de app, kiest wat je wilt
+      doen, en je doet het. Sluit je hem een maand niet, dan gebeurt er niets.</p>
+
+      <p>Wat er dan overblijft, is de inhoud. En die moet dus goed zijn — want
+      er is niets anders om achter te schuilen.</p>
+
+      <div class="note">
+        <p><strong>Het uitgangspunt in één zin:</strong> een oefenapp die een som
+        verkeerd stelt, leert een kind iets verkeerds, en niemand merkt het —
+        want de app rekent zijn eigen antwoord goed. Daarom ligt het zwaartepunt
+        van dit project niet bij de functies maar bij de correctheid van de
+        vragen.</p>
+      </div>
+
+      <h3 style="margin-top:30px;">Drie keuzes die eruit volgen</h3>
+      <p><strong>Geen account.</strong> Een kind hoeft niets aan te maken, niets
+      te onthouden en niets te bevestigen. Dat scheelt een drempel op het moment
+      dat de motivatie er is — en het betekent dat er geen gegevens zijn die
+      ergens anders terecht kunnen komen.</p>
+
+      <p><strong>Geen advertenties.</strong> Niet omdat ze niet zouden opleveren,
+      maar omdat reclame aan kinderen tonen iets anders is dan reclame tonen. De
+      app bevat geen advertentie-SDK; er is dus niets dat gegevens kán
+      doorgeven, ook niet per ongeluk.</p>
+
+      <p><strong>Geen meldingen.</strong> De app stuurt niets, ooit. Hij vraagt
+      ook niet om toestemming voor meldingen, want er is niets om te sturen.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section id="voorwie">
+    <div class="prose">
+      <h2>2. Voor wie het bedoeld is</h2>
+      <p><strong>Kinderen van groep 3 tot en met 8</strong>, ongeveer zes tot
+      twaalf jaar. De onderbouw krijgt kortere zinnen, bekendere woorden en
+      kleinere getallen; de bovenbouw krijgt meerstapssommen waarin je eerst iets
+      anders moet uitrekenen voordat je de vraag kunt beantwoorden.</p>
+
+      <p><strong>Ouders</strong> die willen dat er thuis geoefend wordt zonder
+      dat ze er zelf sommen voor hoeven te bedenken — en zonder dat ze een app
+      op de telefoon zetten die hun kind reclame laat zien.</p>
+
+      <p><strong>Leerkrachten en remedial teachers</strong> die extra
+      oefenmateriaal zoeken dat aansluit bij wat er in de klas behandeld wordt.
+      De app is methode-onafhankelijk: hij volgt de SLO-tussendoelen, niet de
+      volgorde van één specifieke uitgever, en de uitleg gaat over universele
+      rekenafspraken.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section id="praktijk">
+    <div class="prose">
+      <h2>3. Hoe het in de praktijk gaat</h2>
+      <p>Je opent de app en ziet een beginscherm met een profiel, een grote
+      startknop en de vier domeinen. Vanaf daar zijn er twee routes.</p>
+
+      <p><strong>De snelle route</strong> is één knop: <em>Snelstart</em>. De app
+      kiest zelf een mix die past bij de groep van het profiel en begint meteen.
+      Geen instelscherm, geen keuzes.</p>
+
+      <p><strong>De gerichte route</strong> loopt via een instelscherm waarin je
+      kiest welk domein, welke onderdelen daarbinnen, welke moeilijkheid, hoeveel
+      vragen, en of je wilt intypen of uit vier antwoorden wilt kiezen. Wie deze
+      week alleen breuken doet, vinkt alleen breuken aan.</p>
+
+      <p>Tijdens het oefenen staat onderin een knop naar het
+      <strong>kladpapier</strong> en een knop naar <strong>“Hoe zat het ook
+      alweer?”</strong>. Beide openen bovenop de vraag; je raakt je sessie niet
+      kwijt. Een vraag kan worden voorgelezen. Na een fout antwoord verschijnt
+      niet alleen het goede antwoord, maar ook waaróm.</p>
+
+      <p>Aan het eind zie je hoe het per onderdeel ging, kun je je eigen
+      antwoorden teruglezen, en kies je hoe verder: nog een ronde, moeilijker,
+      makkelijker, of gericht op wat net niet lukte.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section id="inhoud">
+    <div class="prose">
+      <h2>4. De inhoud: vier domeinen, zes leerjaren</h2>
+      <p>De oefenstof volgt de <strong>SLO-tussendoelen rekenen-wiskunde</strong>
+      en is verdeeld over dezelfde vier domeinen die het Nederlandse curriculum
+      gebruikt. Binnen elk domein zitten onderdelen die je los kunt aanvinken.</p>
+    </div>
+
+    <div class="grid" style="margin: 26px 0;">
+      <div>
+        <h3>Getallen en bewerkingen</h3>
+        <p>Getalbegrip, optellen, aftrekken, vermenigvuldigen, delen, delen met
+        rest, breuken, kommagetallen, negatieve getallen, Romeinse cijfers,
+        schattend rekenen en samengestelde bewerkingen met haakjes.</p>
+      </div>
+      <div>
+        <h3>Verhoudingen</h3>
+        <p>Verhoudingstabellen, schaal, procenten, korting, rente, prijs per
+        eenheid, recepten omrekenen en mengverhoudingen.</p>
+      </div>
+      <div>
+        <h3>Meten en meetkunde</h3>
+        <p>Lengte, gewicht, inhoud, oppervlakte, omtrek, tijd en geld;
+        vormen, hoeken, spiegelen, bouwsels en aanzichten, kompasrichtingen,
+        plattegronden en samengestelde grootheden zoals snelheid.</p>
+      </div>
+      <div>
+        <h3>Verbanden</h3>
+        <p>Tabellen, staafdiagrammen, lijngrafieken, cirkeldiagrammen,
+        woordformules en getallenreeksen — ook reeksen waarin het verschil zelf
+        groeit, of die terugtellen.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h3>Wat er per groep bijkomt</h3>
+      <p>De leerlijn is cumulatief: wat in groep 5 geleerd is, blijft in groep 6
+      terugkomen. Wat hieronder staat, is wat er <em>nieuw</em> bij komt.</p>
+    </div>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Groep</th><th>Getalbereik</th><th>Wat er nieuw bij komt</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">3</td><td class="num">tot 20</td>
+            <td>Optellen en aftrekken met de sprong over de tien, splitsen,
+            tellen met sprongen, hele uren op de klok, munten en briefjes,
+            vormen herkennen, beelddiagrammen. Nog géén keer- en deelsommen —
+            die horen hier niet.</td>
+          </tr>
+          <tr>
+            <td class="num">4</td><td class="num">tot 100</td>
+            <td>De tafels, positiewaarde (tientallen en eenheden), even en
+            oneven, halve uren, meten met eenheden, patronen voortzetten.</td>
+          </tr>
+          <tr>
+            <td class="num">5</td><td class="num">tot 1.000</td>
+            <td>Alle tafels vlot, delen, de eerste breuken (halven en kwarten,
+            deel van een geheel), kommagetallen in geldcontext, afronden,
+            oppervlakte en omtrek.</td>
+          </tr>
+          <tr>
+            <td class="num">6</td><td class="num">tot 10.000</td>
+            <td>Delen met happen, gelijknamige breuken optellen en aftrekken,
+            vereenvoudigen, kommagetallen met twee decimalen, procenten,
+            prijs per eenheid, oppervlakte van samengestelde figuren.</td>
+          </tr>
+          <tr>
+            <td class="num">7</td><td class="num">tot 100.000</td>
+            <td>Ongelijknamige breuken, breuken vermenigvuldigen en delen, alle
+            bewerkingen met kommagetallen, schaal, hoeken meten, Romeinse
+            cijfers, haakjes in samengestelde sommen, inhoud in m³.</td>
+          </tr>
+          <tr>
+            <td class="num">8</td><td class="num">tot 1.000.000</td>
+            <td>Gemengde breuken, procenten boven de 100, de 1%-regel,
+            rente, samengestelde grootheden (snelheid, dichtheid, verbruik),
+            meerstaps-“valkuilsommen”, negatieve getallen.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose">
+      <h3>Sommen die uit meer dan één stap bestaan</h3>
+      <p>Vanaf groep 6 zitten er vragen in waarbij het gevraagde getal niet
+      rechtstreeks in de opgave staat. <em>“Een rechthoekige kamer heeft een
+      oppervlakte van 24 m². De lengte is 6 m. Wat is de omtrek?”</em> — je moet
+      eerst de breedte terugrekenen voordat je de omtrek kunt bepalen. Dit soort
+      vragen zet aan tot denken in plaats van tot uitrekenen, en ze zijn precies
+      wat kinderen op de eindtoets tegenkomen.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section id="functies">
+    <div class="prose">
+      <h2>5. Alle functies</h2>
+    </div>
+
+    <div class="grid" style="margin: 24px 0;">
+      <div>
+        <h3>Vragen die elke keer opnieuw ontstaan</h3>
+        <p>Er is geen vragenbank. Elke som wordt op het moment zelf opgebouwd
+        uit getallen, een context en een vraagvorm, binnen de grenzen die bij de
+        groep horen. Twee kinderen die tegelijk beginnen krijgen niet dezelfde
+        reeks, en hetzelfde kind ook niet twee keer.</p>
+      </div>
+      <div>
+        <h3>Kale sommen of verhaaltjes</h3>
+        <p>Elke vraag kan als kale som of als verhaaltjessom verschijnen. De
+        contexten komen uit een verzameling van ruim vijfhonderd situaties met
+        realistische grenzen per soort ding, zodat een schoolplein niet vijf
+        centimeter lang wordt.</p>
+      </div>
+      <div>
+        <h3>Meerkeuze of intypen</h3>
+        <p>Vier antwoorden om uit te kiezen, of een invoerveld met een eigen
+        cijfertoetsenbord. Bij meerkeuze zijn de foute antwoorden geen willekeur:
+        het zijn de fouten die kinderen bij dat somtype werkelijk maken.</p>
+      </div>
+      <div>
+        <h3>Kladpapier</h3>
+        <p>Een ruitjesblok waarop je vrij kunt schrijven, met kleine cijfers voor
+        onthouden en lenen, strepen en een deelhaakje. De som staat er alvast
+        onder elkaar op — kolommen uitgelijnd, streep eronder — want dat is bij
+        cijferend rekenen het halve werk.</p>
+      </div>
+      <div>
+        <h3>“Hoe zat het ook alweer?”</h3>
+        <p>39 uitlegkaarten, doorzoekbaar en gefilterd op groep, met
+        stap-voor-stapvoorbeelden. Drie ervan zijn interactief: je klikt de
+        kolomoptelling, de kolomvermenigvuldiging en het delen met happen stap
+        voor stap door.</p>
+      </div>
+      <div>
+        <h3>Uitleg na een fout antwoord</h3>
+        <p>Niet alleen het goede antwoord, maar de tussenstap die je nodig had.
+        Bij een fout in een meerstapssom staat er dus welke stap je oversloeg.</p>
+      </div>
+      <div>
+        <h3>Voorlezen</h3>
+        <p>Vragen worden voorgelezen met de spraakvoorziening van het toestel.
+        Voor een kind dat nog niet vlot leest, wordt een verhaaltjessom anders
+        vooral een leestoets.</p>
+      </div>
+      <div>
+        <h3>Beelden bij de vraag</h3>
+        <p>Elf soorten tekeningen worden ter plekke gegenereerd: getallenlijnen,
+        klokken, breukcirkels en -balken, geometrische figuren met maten,
+        staafdiagrammen, lijngrafieken, cirkeldiagrammen, bouwsels en
+        plattegronden.</p>
+      </div>
+      <div>
+        <h3>Tafelmodule</h3>
+        <p>Los van de rest: vink precies aan welke tafels je wilt oefenen.
+        Handig in de weken dat er één tafel centraal staat.</p>
+      </div>
+      <div>
+        <h3>Snelstart</h3>
+        <p>Eén knop die meteen begint met wat bij het profiel past, en die
+        eindeloos doorloopt tot je zelf stopt.</p>
+      </div>
+      <div>
+        <h3>Profielen</h3>
+        <p>Tot vier profielen op één toestel, elk met een eigen groep, eigen
+        voortgang en eigen records. Genoeg voor een gezin, zonder dat er ooit een
+        account aan te pas komt.</p>
+      </div>
+      <div>
+        <h3>Voortgang per onderdeel</h3>
+        <p>Hoeveel vragen gemaakt, hoeveel goed, en per onderdeel hoe het gaat —
+        met de zwakste onderdelen bovenaan, zodat zichtbaar is waar de winst zit.</p>
+      </div>
+      <div>
+        <h3>Je fouten opnieuw oefenen</h3>
+        <p>Na afloop kun je precies die vragen nog eens doen waar het misging,
+        in plaats van een willekeurige nieuwe ronde.</p>
+      </div>
+      <div>
+        <h3>Geschiedenis en records</h3>
+        <p>Een overzicht van eerdere sessies. Een record telt alleen als de
+        sessie lang genoeg was en goed genoeg ging — een half afgemaakte ronde
+        bederft je beste resultaat niet.</p>
+      </div>
+      <div>
+        <h3>Nederlands en Engels</h3>
+        <p>De hele app, inclusief alle verhaaltjessommen en uitlegkaarten, is in
+        beide talen beschikbaar. Een geautomatiseerde controle bewaakt dat er
+        geen Nederlandse zin in de Engelse modus achterblijft.</p>
+      </div>
+      <div>
+        <h3>Grote letters en donkere modus</h3>
+        <p>De app volgt de systeeminstellingen voor tekstgrootte en thema. De
+        layout is erop getest dat er bij grote letters niets buiten beeld valt.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section id="adaptief">
+    <div class="prose">
+      <h2>6. Hoe de moeilijkheid meebeweegt</h2>
+      <p>Het niveau dat je zelf instelt is een <strong>plafond</strong>, geen
+      startpunt. Binnen dat plafond kijkt de app naar de laatste antwoorden: gaat
+      het goed, dan wordt de volgende vraag iets pittiger; gaat het een paar keer
+      mis, dan zakt hij terug naar het basisniveau.</p>
+
+      <p>Twee dingen zijn daarbij bewust zo gebouwd. <strong>De app gaat nooit
+      boven het gekozen niveau uit</strong> — wie “makkelijk” kiest, krijgt geen
+      moeilijke sommen omdat het toevallig goed gaat. En <strong>het niveau van
+      de huidige vraag is zichtbaar</strong>, zodat een kind of ouder kan zien
+      waar het meebewegen op uitkomt in plaats van te moeten raden.</p>
+
+      <p>Wat de app níét doet, is een oordeel over het kind opslaan of
+      versturen. De voortgang is een hulpmiddel om te zien waar geoefend moet
+      worden, geen dossier.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section id="kwaliteit">
+    <div class="prose">
+      <h2>7. Hoe de inhoud wordt gecontroleerd</h2>
+      <p>Omdat de vragen ter plekke worden opgebouwd, kun je ze niet één voor
+      één nalezen — er zijn er oneindig veel. Wat wel kan, is de <em>vormen</em>
+      nalezen: elke zin die de app kán maken. Een testscript trekt 1.200 vragen
+      per combinatie van onderwerp, groep en onderdeel, streept de getallen weg,
+      en houdt de unieke vraagvormen over. Dat zijn er op dit moment
+      <strong>4.960</strong>. Die verzameling is de basis voor vijf controles die
+      bij elke wijziging opnieuw draaien.</p>
+    </div>
+
+    <div class="stack prose">
+      <div>
+        <h3>Curriculumdekking, doel voor doel</h3>
+        <p>109 SLO-doelen — met de oorspronkelijke formulering erbij — worden
+        naast een steekproef van ruim 60.000 gegenereerde vragen gelegd. Per doel
+        wordt gezocht naar een vraag die dat doel toetst. Stand: <strong>100 van
+        de 100 toetsbare doelen gedekt</strong>. De negen die niet toetsbaar zijn
+        in dit format (zoals “meten met een echte meetlat”) staan met reden in het
+        verslag.</p>
+      </div>
+      <div>
+        <h3>Niveaucontrole</h3>
+        <p>Geen notatie, bewerking of getalbereik dat boven het leerjaar ligt.
+        Groep 3 krijgt geen keer- en deelsommen, groep 5 geen breuken met
+        ongelijke noemers, groep 6 geen drie decimalen.</p>
+      </div>
+      <div>
+        <h3>Aannemelijkheid</h3>
+        <p>Een tabel met realistische onder- en bovengrenzen per soort ding. Een
+        vliegtuig met twee stoelen, een fles van acht liter, een auto met twintig
+        inzittenden of een appel van € 9,50 wordt afgekeurd. Andersom geldt ook:
+        een regel die een kloppende som afkeurt is erger dan geen regel, dus de
+        grenzen worden bijgesteld zodra ze iets tegenhouden dat wél kan.</p>
+      </div>
+      <div>
+        <h3>Taal en woordenschat</h3>
+        <p>Zinslengte en woordkeuze per groep — het mag uitdagend zijn, maar het
+        moet geen begrijpend-lezentoets worden. Plus Nederlandse grammatica:
+        geen “1 stickers”, geen “een rechthoekige klaslokaal”, geen dubbele punt
+        aan het eind van een zin.</p>
+      </div>
+      <div>
+        <h3>Vertaalpariteit</h3>
+        <p>Elke Nederlandse zin heeft een Engelse tegenhanger. Zonder deze
+        controle blijft de Engelse modus onopgemerkt half Nederlands.</p>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p style="margin-top:24px;">Bij elkaar <strong>411 geautomatiseerde
+      tests</strong>. Ze vinden dingen die bij handmatig nalezen ontsnappen —
+      en ze hebben in de afgelopen maanden ook echte didactische fouten
+      gevonden, waaronder een uitlegkaart die de staartdeling voordeed op een
+      manier die het Nederlandse basisonderwijs helemaal niet gebruikt.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section id="techniek">
+    <div class="prose">
+      <h2>8. Techniek, platform en privacy</h2>
+      <p>RekenAppie is gebouwd in Flutter en draait op Android. De app werkt
+      <strong>volledig offline</strong>: er is geen server, geen backend en geen
+      database buiten het toestel. Alles wat de app nodig heeft zit in de app.</p>
+
+      <p>Er is geen account, geen inlog, geen analytics, geen crashreporting naar
+      derden en geen advertentie-SDK. De voortgang staat in de lokale opslag van
+      het toestel. Wat er precies wordt opgeslagen — en de drie situaties waarin
+      er wél iets het toestel verlaat — staat volledig uitgeschreven in de
+      <a href="/privacy">privacyverklaring</a>.</p>
+
+      <p>Ook deze website houdt zich daaraan: geen trackers, geen cookies, en de
+      lettertypes worden vanaf deze server geladen in plaats van bij een externe
+      partij. Een webfont van een CDN stuurt namelijk het IP-adres van elke
+      bezoeker naar die partij, en dat valt slecht te rijmen met wat er in de
+      privacyverklaring staat.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section id="grenzen">
+    <div class="prose">
+      <h2>9. Wat RekenAppie niet is</h2>
+      <p>Eerlijk zijn over de grenzen hoort erbij, zeker bij software voor
+      kinderen.</p>
+
+      <p><strong>Geen rekenmethode en geen vervanging van een leerkracht.</strong>
+      Instructie hoort op school of thuis te gebeuren. De uitlegkaarten zijn
+      geheugensteuntjes voor wie het al een keer heeft gehad, geen eerste kennismaking.</p>
+
+      <p><strong>Geen toets en geen diagnose.</strong> De voortgangscijfers laten
+      zien waar geoefend moet worden. Ze zeggen niets over of een kind
+      dyscalculie heeft, en ze zijn niet te vergelijken met een Cito-score.</p>
+
+      <p><strong>Geen volledige dekking van het curriculum.</strong> Sommige
+      doelen laten zich niet in een app toetsen: meten met een echte meetlat,
+      een bouwsel natekenen op papier, of samen met een klasgenoot een
+      oplossing bespreken. Die staan als zodanig benoemd in het dekkingsverslag,
+      in plaats van stilzwijgend te ontbreken.</p>
+
+      <p><strong>Geen leerlingvolgsysteem.</strong> Er is geen leerkrachtportaal,
+      geen klasoverzicht en geen export. Een school die dat nodig heeft, heeft
+      iets anders nodig dan deze app.</p>
+    </div>
+  </section>
+
+  <!-- ==================================================================== -->
+  <section id="kosten">
+    <div class="prose">
+      <h2>10. Wat het kost</h2>
+      <p><strong>Niets.</strong> RekenAppie is gratis en blijft gratis. Er is
+      geen proefperiode, geen abonnement, geen premium-versie en geen onderdeel
+      dat achter een betaling zit.</p>
+
+      <p>In de app zit één vrijwillige donatieknop, met drie kleine bedragen.
+      Doneren <em>ontgrendelt niets</em> — geen extra sommen, geen extra functies,
+      geen badge. Het is een bedankje, en het houdt de ontwikkeling betaalbaar
+      zonder dat er ooit reclame aan een kind getoond hoeft te worden.</p>
+
+      <p>Voor scholen en besturen die de app in de klas willen gebruiken:
+      <a href="mailto:info@vectraxis.app">info@vectraxis.app</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div>© 2026 Vectraxis</div>
+    <nav>
+      <a href="/">Vectraxis</a>
+      <a href="/rekenappie/">RekenAppie</a>
+      <a href="/rekenappie/changelog">Changelog</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Voorwaarden</a>
+      <a href="mailto:info@vectraxis.app">info@vectraxis.app</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

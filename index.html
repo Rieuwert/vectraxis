@@ -3,112 +3,172 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RekenAppie — rekenen oefenen voor groep 3 t/m 8</title>
-<meta name="description" content="RekenAppie is een gratis Nederlandse oefen-app voor basisschoolrekenen. Offline, zonder advertenties en zonder tracking.">
-<link rel="stylesheet" href="style.css">
+<title>Vectraxis</title>
+<meta name="description" content="Vectraxis is een Nederlandse eenmanszaak die kleine Android-apps maakt zonder advertenties, tracking, accounts of meldingen. Eerste product: RekenAppie.">
+<link rel="icon" href="/img/rekenappie-icon.png" sizes="any">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-<header class="site-header">
-  <h1>RekenAppie</h1>
-  <p>Rekenen oefenen voor groep 3 t/m 8 — gratis, offline, zonder advertenties.</p>
+<header class="topbar">
+  <div class="topbar__inner">
+    <a class="wordmark" href="/">
+      <svg class="mark" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+        <path d="M3 1v16h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="square"/>
+        <path d="M3.6 16.4 14.6 5.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="15" cy="5" r="2.5" fill="currentColor"/>
+      </svg>
+      Vectraxis
+    </a>
+    <nav class="topnav">
+      <a href="/rekenappie/">RekenAppie</a>
+      <a href="#werkwijze">Werkwijze</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<nav class="site-nav">
-  <a href="#over">Over de app</a>
-  <a href="#watzitterin">Wat zit erin</a>
-  <a href="#privacy">Privacy</a>
-  <a href="#vectraxis">Vectraxis</a>
-</nav>
-
-<main class="wrap">
-
-  <h2 id="over">Over de app</h2>
-  <p>RekenAppie laat kinderen rekenen oefenen op hun eigen niveau. De vragen
-  worden per keer opnieuw opgebouwd in plaats van uit een vaste lijst getrokken,
-  dus je kind krijgt niet steeds dezelfde sommen voorgeschoteld. De moeilijkheid
-  beweegt mee met wat er al goed gaat.</p>
-
-  <p>De oefenstof volgt de <strong>SLO-tussendoelen rekenen-wiskunde</strong> en
-  is verdeeld over de vier domeinen die daar worden gebruikt: getallen en
-  bewerkingen, verhoudingen, meten en meetkunde, en verbanden. De app is
-  methode-onafhankelijk: de uitleg gaat over universele rekenafspraken, niet over
-  de aanpak van één specifieke schoolmethode.</p>
-
-  <div class="callout">
-    <p><strong>RekenAppie is nadrukkelijk geen rekenmethode en vervangt geen
-    leerkracht.</strong> Instructie hoort op school of thuis te gebeuren; deze app
-    is bedoeld om daarna te oefenen.</p>
+<section class="hero">
+  <div class="hero__inner">
+    <p class="eyebrow">Kleine apps uit Nederland</p>
+    <h1>Apps die je met rust laten.</h1>
+    <p class="lead">Vectraxis maakt kleine Android-apps: oefensoftware,
+    spelletjes, gereedschap. Geen advertenties, geen tracking, geen account,
+    geen meldingen die om aandacht vragen. Wat een app doet, doet hij goed —
+    en verder doet hij niets.</p>
+    <div class="actions">
+      <a class="btn btn--primary" href="/rekenappie/">Bekijk RekenAppie</a>
+      <a class="btn btn--ghost" href="#werkwijze">Hoe we werken</a>
+    </div>
   </div>
+</section>
 
-  <h2 id="watzitterin">Wat zit erin</h2>
+<main>
 
-  <div class="card">
-    <h3>Oefenen per groep en per onderdeel</h3>
-    <p>Groep 3 tot en met 8, drie moeilijkheidsniveaus, en de keuze tussen
-    meerkeuze of zelf het antwoord intypen. Je kunt gericht één onderdeel oefenen
-    of alles door elkaar.</p>
-  </div>
+  <section class="section page" id="producten">
+    <h4>Producten</h4>
 
-  <div class="card">
-    <h3>Kladpapier</h3>
-    <p>Een ruitjesblok in de app waarop kolomsommen en staartdelingen uitgewerkt
-    kunnen worden, met kleine cijfers voor onthouden en lenen, en strepen voor de
-    somstreep en het deelhaakje.</p>
-  </div>
+    <div class="product t-rekenappie">
+      <img class="product__icon" src="/img/rekenappie-icon.png"
+           alt="Het app-icoon van RekenAppie" width="92" height="92">
+      <div>
+        <h3>RekenAppie</h3>
+        <p class="product__meta">Android · groep 3 t/m 8 · gratis</p>
+        <p>Rekenen oefenen op je eigen niveau. De sommen worden per keer
+        opnieuw opgebouwd in plaats van uit een vaste lijst getrokken, dus geen
+        kind krijgt twee keer dezelfde reeks. De oefenstof volgt de
+        SLO-tussendoelen rekenen-wiskunde en is verdeeld over dezelfde vier
+        domeinen die het curriculum gebruikt.</p>
+        <div class="actions">
+          <a class="btn btn--ghost" href="/rekenappie/">Naar de productpagina</a>
+        </div>
+      </div>
+    </div>
 
-  <div class="card">
-    <h3>"Hoe zat het ook alweer?"</h3>
-    <p>Uitlegkaarten met stap-voor-stap-voorbeelden van kolomrekenen,
-    staartdelingen en andere procedures — te openen terwijl je aan het oefenen bent.</p>
-  </div>
+    <p class="lead-in" style="margin-top: 26px;">RekenAppie is het eerste
+    product van Vectraxis, en het meest omvangrijke. Wat erna komt is kleiner
+    van opzet — spelletjes en gereedschap — maar volgt dezelfde regels. Nieuwe
+    apps verschijnen hier zodra er iets te laten zien is, en niet eerder.</p>
+  </section>
 
-  <div class="card">
-    <h3>Profielen en voortgang</h3>
-    <p>Tot vier profielen op één toestel, elk met een eigen voortgangsoverzicht:
-    hoeveel vragen gemaakt, hoe het per onderwerp gaat en waar nog winst te halen
-    valt. Geen account nodig.</p>
-  </div>
+  <section class="section page" id="werkwijze">
+    <h4>Werkwijze</h4>
+    <h2>Drie uitgangspunten, en wat ze in de praktijk betekenen</h2>
+    <p class="lead-in">Ze gelden voor elke app die hier gemaakt wordt, of het
+    nu om rekenen gaat of om een spelletje. Ze klinken als
+    vanzelfsprekendheden, maar dat zijn ze niet: elk van de drie kost geld,
+    tijd of gemak. Daarom ontbreken ze in zoveel apps.</p>
 
-  <div class="card">
-    <h3>Voorlezen</h3>
-    <p>Vragen kunnen worden voorgelezen met de spraakvoorziening van het toestel —
-    handig voor kinderen die nog niet vlot lezen.</p>
-  </div>
+    <div class="grid" style="margin-top: 30px;">
+      <div>
+        <h3>Wat erin zit, klopt</h3>
+        <p>Een oefenapp die een som fout stelt, leert een kind iets verkeerds —
+        en niemand merkt het, want de app rekent zijn eigen antwoord goed.
+        Daarom is de inhoud van RekenAppie het zwaartepunt en niet de bijzaak:
+        de vragen worden doel voor doel aan de SLO-doelen getoetst, en
+        geautomatiseerde controles lezen elke gegenereerde zin na op niveau,
+        woordenschat, Nederlandse grammatica en aannemelijkheid. Een vliegtuig
+        met twee stoelen komt er niet doorheen.</p>
+      </div>
+      <div>
+        <h3>Geen aandacht-economie</h3>
+        <p>Geen advertenties, geen dagelijkse reeksen om vol te houden, geen
+        pushmeldingen, geen ranglijsten. Die middelen werken — daarom zitten ze
+        overal in — maar ze werken door druk te zetten op de gebruiker, en bij
+        RekenAppie is dat een kind van acht. Wie de app wil gebruiken opent
+        hem; wie dat niet wil hoort er niets van.</p>
+      </div>
+      <div>
+        <h3>Alles blijft op het toestel</h3>
+        <p>Geen account, geen inlog, geen server. De voortgang van een kind
+        staat op het toestel en nergens anders. De app werkt volledig offline en
+        heeft geen internettoegang nodig om te doen waar hij voor is. Ook deze
+        website laadt niets van externe servers — de lettertypes staan hier, niet
+        bij een advertentienetwerk.</p>
+      </div>
+    </div>
+  </section>
 
-  <h2 id="privacy">Privacy</h2>
-  <p>RekenAppie werkt offline. Er is geen account, geen inlog, geen advertentie,
-  geen analytics en geen tracking. De voortgang van je kind blijft op het toestel
-  staan. Wat de app precies opslaat — en de drie situaties waarin er wél iets het
-  toestel verlaat — staat volledig uitgeschreven in de
-  <a href="/privacy">privacyverklaring</a>.</p>
+  <section class="section--tight">
+    <div class="page">
+      <h4>RekenAppie in cijfers</h4>
+    </div>
+    <div class="page" style="padding-top:0;padding-bottom:0;"><div class="stats" style="margin-top: 14px;">
+      <div class="stat"><span class="stat__value">4.960</span><span class="stat__label">unieke vraagvormen</span></div>
+      <div class="stat"><span class="stat__value">100/100</span><span class="stat__label">SLO-doelen gedekt</span></div>
+      <div class="stat"><span class="stat__value">411</span><span class="stat__label">geautomatiseerde tests</span></div>
+      <div class="stat"><span class="stat__value">0</span><span class="stat__label">trackers en advertenties</span></div>
+    </div></div>
+    <div class="page" style="padding-top: 18px;">
+      <p class="lead-in" style="font-size: 0.92rem; color: var(--muted);">
+      Gemeten op versie 1.24.0. De dekkingstabel en de lijst met vraagvormen
+      worden bij elke testronde opnieuw gegenereerd, zodat de cijfers niet uit
+      de lucht komen vallen.</p>
+    </div>
+  </section>
 
-  <h2 id="vectraxis">Over Vectraxis</h2>
-  <p>Vectraxis is de naam waaronder RekenAppie wordt ontwikkeld en uitgegeven: een
-  onafhankelijk Nederlands ontwikkelproject, geen bedrijf met een team erachter.
-  De app is ontstaan uit de wens om rekenoefening te maken die inhoudelijk klopt,
-  geen reclame aan kinderen laat zien en geen gegevens verzamelt.</p>
-  <p>Er wordt niets verkocht en niets afgeschermd: de app is volledig gratis. Wie
-  het werk wil waarderen kan in de app vrijwillig een klein bedrag geven, maar dat
-  ontgrendelt niets — het blijft een bedankje.</p>
+  <section class="section page" id="over">
+    <h4>Over Vectraxis</h4>
+    <div class="prose">
+      <h2>Een eenmanszaak, geen platform</h2>
+      <p>Vectraxis is een Nederlandse eenmanszaak, ingeschreven bij de Kamer van
+      Koophandel. Achter de naam zit één ontwikkelaar, geen team en geen
+      investeerder — en dat is geen bescheidenheid maar een ontwerpkeuze: een
+      product zonder groeidoelstelling hoeft de aandacht van zijn gebruikers
+      niet te verkopen.</p>
+      <p>De apps zijn klein van opzet en worden één voor één gemaakt.
+      RekenAppie is gratis en blijft gratis. Wie het werk wil waarderen kan in
+      de app vrijwillig een klein bedrag geven, maar dat ontgrendelt niets —
+      het blijft een bedankje.</p>
+    </div>
+  </section>
 
-  <h2>Beschikbaarheid</h2>
-  <p>RekenAppie is in voorbereiding voor de Google Play Store. Zodra de app
-  beschikbaar is, komt de downloadlink op deze pagina te staan.</p>
-
-  <h2>Contact</h2>
-  <p>Vragen, een fout gevonden in een som, of een suggestie? Mail
-  <a href="mailto:info@vectraxis.app">info@vectraxis.app</a>. Meldingen over
-  rekenfouten zijn extra welkom — inhoudelijke correctheid is het belangrijkste
-  aan deze app.</p>
+  <section class="section page" id="contact">
+    <h4>Contact</h4>
+    <div class="prose">
+      <h2>Vragen, fouten en suggesties</h2>
+      <p>Mail <a href="mailto:info@vectraxis.app">info@vectraxis.app</a>.
+      Meldingen over rekenfouten zijn extra welkom: inhoudelijke correctheid is
+      het belangrijkste aan wat hier gemaakt wordt, en een gebruiker die een
+      fout vindt doet precies het werk dat een test niet kan doen.</p>
+      <p>Voor scholen en besturen: neem gerust contact op over gebruik in de
+      klas. Zeg er dan bij om hoeveel leerlingen en welke groepen het gaat.</p>
+    </div>
+  </section>
 
 </main>
 
 <footer class="site-footer">
-  © 2026 Vectraxis ·
-  <a href="/privacy">Privacy</a> ·
-  <a href="/terms">Voorwaarden</a> ·
-  <a href="mailto:info@vectraxis.app">Contact</a>
+  <div class="site-footer__inner">
+    <div>© 2026 Vectraxis</div>
+    <nav>
+      <a href="/rekenappie/">RekenAppie</a>
+      <a href="/rekenappie/changelog">Changelog</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Voorwaarden</a>
+      <a href="mailto:info@vectraxis.app">info@vectraxis.app</a>
+    </nav>
+  </div>
 </footer>
 
 </body>
