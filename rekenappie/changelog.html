@@ -36,7 +36,7 @@
     <p class="lead">Alle releases sinds de eerste versie, met per release wat er
     is toegevoegd, gewijzigd en hersteld. Versies vóór de publicatie in de
     Google Play Store zijn ontwikkelreleases; ze staan hier volledigheidshalve.</p>
-    <p class="meta">Laatste release: 1.28.0 · 21 augustus 2026</p>
+    <p class="meta">Laatste release: 1.29.0 · 22 augustus 2026</p>
   </div>
 </section>
 
@@ -52,31 +52,34 @@
 
   <div class="release">
     <div class="release__side">
+      <span class="version">1.29.0</span>
+      <span class="release__date">22 augustus 2026</span>
+      <span class="tag">Inhoud</span>
+    </div>
+    <div>
+      <h3>Correcties uit de testronde</h3>
+      <ul>
+        <li>Bij de tafels en de basissommen staat geen groep meer onderaan; die koos je daar niet.</li>
+        <li>Basissommen toont in plaats daarvan het gekozen getalbereik.</li>
+        <li>Minder herhaling binnen een sessie: dezelfde zin of dezelfde getallen komen niet meer kort na elkaar terug.</li>
+        <li>Verhoudingen in groep 5 kreeg een ruimere getallenpoel.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
       <span class="version">1.28.0</span>
       <span class="release__date">21 augustus 2026</span>
       <span class="tag">Inhoud</span>
     </div>
     <div>
-      <h3>Vier bevindingen uit een testronde met kinderen</h3>
+      <h3>Vier correcties uit een testronde</h3>
       <ul>
-        <li><strong>Romeinse cijfers negeerden het niveau.</strong> Groep 8 op
-        <em>normaal</em> gaf eerst 1776 en vier vragen later "hoe schrijf je
-        4?" — de generator trok uit één lijst van 4 tot 2024, ongeacht de
-        moeilijkheid. De drie niveaus overlappen nu niet meer, en jaartallen
-        blijven voorbehouden aan <em>moeilijk</em>.</li>
-        <li><strong>Voorrangsregels in groep 4.</strong> Een kind in groep 4
-        kreeg <code>8 ÷ 4 − 2</code>, een som die leunt op "eerst keer en
-        delen" — een regel die pas vanaf groep 5 wordt uitgelegd. Onder groep 5
-        komen × en ÷ niet meer in een keten voor.</li>
-        <li><strong>Een antwoord dat niet in te tikken was.</strong> "Wat is
-        meer: 3/4 van 16 of 1/2 van 16?" leest als een keuze tussen twee
-        breuken, terwijl de app een aantal verwacht — en een cijfertoetsenbord
-        heeft geen breukstreep. De vraag begint nu met "Hoeveel", en een nieuwe
-        controle bewaakt dat elk antwoord met cijfers, komma en minteken te
-        typen is.</li>
-        <li><strong>"Voor ouders" heet nu "Weekoverzicht"</strong> en zit niet
-        meer achter een rekensom. Er stond niets in dat een kind niet mag zien,
-        en de nuttigste knop — <em>Oefen dit</em> — is juist voor het kind.</li>
+        <li>Romeinse cijfers volgen nu de gekozen moeilijkheid.</li>
+        <li>Geen voorrangsregels meer in groep 4.</li>
+        <li>Antwoorden zijn altijd in te tikken op het cijfertoetsenbord.</li>
+        <li>"Voor ouders" heet nu "Weekoverzicht" en is voor iedereen toegankelijk.</li>
       </ul>
     </div>
   </div>
@@ -88,22 +91,13 @@
       <span class="tag">Interface</span>
     </div>
     <div>
-      <h3>Rustiger vraagscherm, delen en een ouderoverzicht</h3>
+      <h3>Rustiger vraagscherm, delen en weekoverzicht</h3>
       <ul>
-        <li>De verticale as van een grafiek gebruikt nu ronde getallen op
-        gelijke afstanden. Bij een hoogste waarde van 25 dus 10, 20 en 30 in
-        plaats van 8, 15, 23 en 30.</li>
-        <li>De meldknop stond boven de antwoorden en duwde die van het scherm
-        af; hij staat nu onderaan en heet "Meld een probleem".</li>
-        <li>De vraagtekst is niet meer vet en er is lucht weggehaald boven de
-        vraag: op een telefoon passen alle vier de antwoorden zonder scrollen.</li>
-        <li>Nieuw: <strong>deel het resultaat</strong> — een kort tekstblok met
-        vak, groep, niveau en score, zonder naam of profiel.</li>
-        <li>Nieuw: <strong>een overzicht voor ouders</strong> met wat er deze
-        week is geoefend en waar het kind vastloopt, met per onderdeel een knop
-        om er meteen op te oefenen.</li>
-        <li>De tafelmodus met uitkomsten tot 1.000.000 is verwijderd: geen
-        leerdoel, en hij vervuilde de voortgang.</li>
+        <li>Grafiekassen gebruiken ronde getallen op gelijke afstanden.</li>
+        <li>Alle antwoorden passen zonder scrollen op een telefoon.</li>
+        <li>Nieuw: resultaat delen als tekstblok.</li>
+        <li>Nieuw: weekoverzicht met wat er nog niet loopt.</li>
+        <li>De tafelmodus met uitkomsten tot 1.000.000 is verwijderd.</li>
       </ul>
     </div>
   </div>
@@ -115,20 +109,12 @@
       <span class="tag">Kwaliteit</span>
     </div>
     <div>
-      <h3>Rekenwerk doorgelicht, groep voor groep</h3>
+      <h3>Rekenwerk doorgelicht</h3>
       <ul>
-        <li>Nieuwe controle over <strong>100.800 vragen</strong> in 504
-        combinaties van onderwerp, groep, onderdeel en niveau: klopt de som,
-        klopt het antwoord, past het niveau bij de groep, en loopt de
-        moeilijkheid werkelijk op van makkelijk naar moeilijk.</li>
-        <li>De breuk 1/8 werd getoond als 0,13 terwijl het antwoord 0,125 is:
-        de getalopmaak rondde altijd op twee decimalen af, ook waar de vraag om
-        drie vroeg.</li>
-        <li>Groep 4 kreeg een telrij die bij −5 begon. Negatieve getallen zijn
-        bovenbouwstof.</li>
-        <li>Bij geld en inhoud werd de vraagsoort willekeurig gekozen, los van
-        de moeilijkheid — waardoor "makkelijk" gemiddeld zwaarder was dan
-        "moeilijk". De moeilijkheid bepaalt nu ook wélke vraag je krijgt.</li>
+        <li>100.800 vragen nagerekend op som, antwoord en niveau.</li>
+        <li>Afrondingsfout bij breuken naar kommagetallen hersteld.</li>
+        <li>Negatieve getallen verwijderd uit groep 4.</li>
+        <li>Moeilijkheid bepaalt nu ook welke vraagsoort je krijgt.</li>
       </ul>
     </div>
   </div>
@@ -140,19 +126,12 @@
       <span class="tag">Taal</span>
     </div>
     <div>
-      <h3>Taalcontrole van 14 naar 54 regels</h3>
+      <h3>Taalcontrole uitgebreid</h3>
       <ul>
-        <li>Elke vraagvorm wordt nagelezen op 54 taalregels: zinsstructuur en
-        interpunctie, telegram versus boekwerk, voorzetsels, lidwoord en
-        geslacht, getalcongruentie, werkwoordsvormen, woordvolgorde, register
-        en notatie. Eerste ronde: 736 kapotte sjablonen; daarna nul.</li>
-        <li>220 telegramzinnen herschreven tot hele zinnen: <em>"Hoeveel
-        stoelen in totaal?"</em> werd <em>"Hoeveel stoelen zijn er in
-        totaal?"</em></li>
-        <li>Zes opgaven bevatten twee vragen met maar één antwoordveld;
-        allemaal teruggebracht tot één vraag.</li>
-        <li>Notatie rechtgezet: een spatie tussen getal en eenheid, het echte
-        minteken, en het juiste meervoud na een telwoord.</li>
+        <li>Elke vraagvorm wordt nagelezen op 54 taalregels.</li>
+        <li>220 telegramzinnen herschreven tot hele zinnen.</li>
+        <li>Opgaven met twee vragen teruggebracht tot één.</li>
+        <li>Notatie rechtgezet: spaties bij eenheden, het juiste minteken.</li>
       </ul>
     </div>
   </div>
@@ -166,17 +145,9 @@
     <div>
       <h3>Kladpapier en uitlegmodule</h3>
       <ul>
-        <li>Het kladpapier zet nu ook optellingen en aftrekkingen kant-en-klaar
-        onder elkaar: grootste getal boven, eenheden in dezelfde kolom, somstreep
-        eronder. Breuksommen en samengestelde expressies worden op de bovenste
-        regel overgeschreven met werkruimte eronder.</li>
-        <li>Werkvlak vergroot van 14 naar 18 regels, zodat een deling met happen
-        er in één keer op past.</li>
-        <li>De interactieve deel-uitleg demonstreert nu delen met happen in
-        plaats van de formele staartdeling, in lijn met de bijbehorende
-        uitlegkaart en met het Nederlandse curriculum.</li>
-        <li>De drie interactieve uitlegblokken hebben identieke bediening
-        gekregen en kunnen aan het eind opnieuw worden gestart.</li>
+        <li>Het kladpapier zet ook plus- en minsommen kant-en-klaar onder elkaar.</li>
+        <li>Werkvlak vergroot van 14 naar 18 regels.</li>
+        <li>De deel-uitleg demonstreert nu delen met happen.</li>
         <li>2.537 regels ongebruikte code verwijderd.</li>
       </ul>
     </div>
@@ -191,20 +162,10 @@
     <div>
       <h3>Dekkingsverslag en didactische correctie</h3>
       <ul>
-        <li>Nieuwe geautomatiseerde toets die 109 SLO-doelen naast ruim 60.000
-        gegenereerde vragen legt en per doel een bewijsvraag zoekt. Uitkomst:
-        100 van de 100 toetsbare doelen gedekt; negen doelen als “buiten bereik
-        van dit format” gedocumenteerd, met reden.</li>
-        <li>Acht onderdelen bleken geen uitlegkaart te hebben. Zes nieuwe kaarten
-        geschreven; de toets faalt voortaan als een onderdeel zonder uitleg
-        blijft.</li>
-        <li><strong>Didactische correctie:</strong> de uitleg over delen volgde
-        de formele staartdeling, die in het Nederlandse basisonderwijs niet wordt
-        aangeboden. Herschreven naar delen met happen, met de compacte notatie
-        als naschrift.</li>
-        <li>Kladpapier uitgebreid met breukstreep, haakjes en procentteken —
-        tekens die de app zelf in zijn vragen gebruikte maar die niet op het
-        toetsenbord stonden.</li>
+        <li>109 SLO-doelen getoetst tegen ruim 60.000 vragen; 100 van de 100 toetsbare doelen gedekt.</li>
+        <li>Zes nieuwe uitlegkaarten voor onderdelen die er nog geen hadden.</li>
+        <li>De uitleg over delen volgt nu delen met happen in plaats van de formele staartdeling.</li>
+        <li>Kladpapier uitgebreid met breukstreep, haakjes en procentteken.</li>
       </ul>
     </div>
   </div>
@@ -218,14 +179,10 @@
     <div>
       <h3>Onderbouw op niveau gebracht</h3>
       <ul>
-        <li>Getalbegrip in groep 4 uitgebreid van drie naar het volledige aantal
-        vraagvormen dat het curriculum vraagt.</li>
-        <li>Groep 3 kreeg sprongtellen, gewicht en inhoud vergelijken, halve uren
-        op de klok en patronen voortzetten.</li>
-        <li>Staafdiagrammen vanaf groep 3 in plaats van vanaf de bovenbouw.</li>
-        <li>Groep 5 kreeg kommagetallen in geld- en maatcontext en de eerste
-        breuken.</li>
-        <li>Twee rekenfouten in gegenereerde opgaven hersteld.</li>
+        <li>Getalbegrip in groep 4 uitgebreid tot wat het curriculum vraagt.</li>
+        <li>Groep 3 kreeg sprongtellen, gewicht, inhoud, halve uren en patronen.</li>
+        <li>Staafdiagrammen vanaf groep 3.</li>
+        <li>Groep 5 kreeg kommagetallen en de eerste breuken.</li>
       </ul>
     </div>
   </div>
@@ -239,15 +196,10 @@
     <div>
       <h3>Verbanden, meetkunde en samengestelde grootheden</h3>
       <ul>
-        <li>Lijngrafieken en cirkeldiagrammen toegevoegd, met bijbehorende
-        aflees- en interpretatievragen.</li>
-        <li>Tijd omrekenen (etmalen, weken, kalender, over middernacht,
-        schrikkeljaren) en samengestelde grootheden zoals snelheid, dichtheid en
-        verbruik.</li>
-        <li>Woordformules en drie nieuwe soorten getallenreeksen, waaronder
-        reeksen met een groeiend verschil.</li>
-        <li>Ruimtelijk inzicht: bouwsels, aanzichten, spiegelen,
-        kompasrichtingen en hoogtekaarten.</li>
+        <li>Lijngrafieken en cirkeldiagrammen toegevoegd.</li>
+        <li>Tijd omrekenen en samengestelde grootheden zoals snelheid en verbruik.</li>
+        <li>Woordformules en drie nieuwe soorten getallenreeksen.</li>
+        <li>Ruimtelijk inzicht: bouwsels, aanzichten, spiegelen en kompasrichtingen.</li>
       </ul>
     </div>
   </div>
