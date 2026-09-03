@@ -701,3 +701,92 @@ td.num { font-variant-numeric: tabular-nums; font-family: var(--mono); }
 /* De productkaart is breed omdat het icoon links staat, maar de tekst ernaast
    moet een normale leesregel houden — anders loopt hij tot 135 tekens door. */
 .product > div > p { max-width: 42rem; }
+
+/* --- v1.32: hero met telefoon, domeintegels, grotere schermen ----------- */
+
+/* Tekst links, het toestel rechts. Op smal scherm gewoon onder elkaar. */
+.hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: 40px;
+  align-items: center;
+}
+@media (max-width: 760px) {
+  .hero__grid { grid-template-columns: 1fr; gap: 28px; }
+  .hero__grid .phone { max-width: 220px; margin: 0 auto; }
+}
+
+/* Een toestel van louter CSS: donkere rand, ronde hoeken, de schermafbeelding
+   erin. Geen plaatje van een telefoon dat je moet meeleveren en dat bij het
+   volgende model weer oud is. */
+.phone {
+  position: relative;
+  max-width: 250px;
+  margin: 0 0 0 auto;
+  padding: 12px;
+  border-radius: 34px;
+  background: #16211f;
+  box-shadow:
+    0 30px 60px -30px rgba(18, 26, 30, 0.45),
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset;
+  transform: rotate(-2deg);
+}
+.phone::after {
+  content: '';
+  position: absolute;
+  top: 12px; left: 50%;
+  width: 84px; height: 6px;
+  margin-left: -42px;
+  border-radius: 0 0 8px 8px;
+  background: #16211f;
+}
+.phone img {
+  display: block;
+  width: 100%;
+  border-radius: 24px;
+  background: var(--surface);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .phone { transition: transform 300ms ease; }
+  .phone:hover { transform: rotate(0deg); }
+}
+
+/* De vier rekendomeinen als tegels, elk met de kleur die de app zelf gebruikt
+   — dezelfde vier die een kind op het startscherm ziet. */
+.domains {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 720px) { .domains { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.domain {
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--domain, var(--product));
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 16px 16px 14px;
+}
+.domain__icon { font-size: 1.5rem; line-height: 1; display: block; margin-bottom: 10px; }
+.domain h3 { font-size: 1rem; margin: 0 0 6px; }
+.domain p { font-size: 0.88rem; color: var(--muted); margin: 0; line-height: 1.5; }
+.domain--getallen    { --domain: #1565c0; }
+.domain--verhoudingen{ --domain: #2e7d32; }
+.domain--meten       { --domain: #ef6c00; }
+.domain--verbanden   { --domain: #6a1b9a; }
+
+/* Schermen: iets groter, met een zachte schaduw, zodat het niet als een rij
+   postzegels oogt. */
+.shot { flex: 0 0 236px; }
+.shot img {
+  border-radius: 18px;
+  box-shadow: 0 18px 40px -26px rgba(18, 26, 30, 0.5);
+}
+
+/* Vijf cijfers in twee kolommen laat op een telefoon één lege cel over; de
+   laatste neemt dan de hele breedte. */
+@media (max-width: 720px) {
+  .stats > .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
