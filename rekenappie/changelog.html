@@ -36,18 +36,63 @@
     <p class="lead">Alle releases sinds de eerste versie, met per release wat er
     is toegevoegd, gewijzigd en hersteld. Versies vóór de publicatie in de
     Google Play Store zijn ontwikkelreleases; ze staan hier volledigheidshalve.</p>
-    <p class="meta">Laatste release: 1.32.0 · 3 september 2026</p>
+    <p class="meta">Laatste release: 1.33.0 · 8 september 2026</p>
   </div>
 </section>
 
 <main class="doc page">
 
   <div class="prose">
-    <h2>Augustus 2026 — curriculumdoorlichting en release-voorbereiding</h2>
+    <h2>Augustus en september 2026 — doorlichting en release-voorbereiding</h2>
     <p class="lead-in">Een systematische doorlichting van de vragenbank tegen de
     SLO-tussendoelen, gevolgd door het wegwerken van elk gat dat daarbij aan het
     licht kwam. Daarnaast alles wat nodig is voor publicatie: ondertekening,
     privacyverklaring, in-app producten en winkelmateriaal.</p>
+  </div>
+
+  <div class="release">
+    <div class="release__side">
+      <span class="version">1.33.0</span>
+      <span class="release__date">8 september 2026</span>
+      <span class="tag">Inhoud</span>
+    </div>
+    <div>
+      <h3>Doorlichting van de hele vragenbank</h3>
+      <p>Een tester maakte tien vragen en drie daarvan deugden niet. Daarop is
+      elke vraagvorm die de app kan maken nagelezen: 6.787 vormen, telkens met
+      het antwoord, de vier knoppen, de hint en de tekening ernaast. Dat leverde
+      ongeveer 300 bevindingen op. Dit zijn de belangrijkste reparaties.</p>
+      <ul>
+        <li>Schatten klopte in geen enkele groep. In groep 4 en 5 werden beide
+        getallen op tientallen afgerond, waardoor het antwoord altijd 100 was —
+        bij "5 rijen met 5 stoelen" vier keer te veel. Ook sprak de opdracht in
+        de vraag de hint tegen. Opnieuw opgezet: groep 4 schat zonder af te
+        ronden, daarboven liggen de getallen vlak bij een tiental, en exact
+        uitrekenen telt altijd mee.</li>
+        <li>Maten schatten is herbouwd. De vraag noemt nu wélke maat bedoeld is
+        ("Hoe hoog is een tafel ongeveer?"), alle vragen zijn meerkeuze, en de
+        antwoorden schelen een factor tien. Een schatvraag met één toegestaan
+        getal is geen schatvraag.</li>
+        <li>"Je legt 4 kaarten in 5 stapeltjes" leest als vier kaarten in
+        totaal. Herschreven, net als het werkblad en het fietsenrek.</li>
+        <li>Verhoudingen die in het echt vastliggen zijn eruit: bij vier
+        fietsers horen acht wielen, niet vierentwintig.</li>
+        <li>Acht hints die het antwoord voorzeiden zijn vervangen door een
+        telstrategie, en "schuif de komma 1000 keer op" is nu "schuif de komma
+        3 plaatsen naar rechts".</li>
+        <li>Blokkenbouwsels hebben altijd iets te zien; het bovenaanzicht heeft
+        altijd een leeg vakje.</li>
+        <li>De schaalvraag noemt de gevraagde eenheid, zodat 1250 meter niet
+        fout wordt gerekend omdat de app 1,25 kilometer verwachtte.</li>
+        <li>Antwoordknoppen schrijven "1 dag" in plaats van "1 dagen".</li>
+        <li>Elk voorwerp heeft een eigen maatbereik: geen laptop van 5 bij 8
+        centimeter meer.</li>
+        <li>Gelijke waarden maakten "de op één na hoogste" onbeantwoordbaar, en
+        een gemiddelde van 19,333 kwam niet uit. Beide opgelost.</li>
+      </ul>
+      <p>Twaalf nieuwe geautomatiseerde controles bewaken deze punten. De
+      openstaande punten staan in het auditverslag bij de broncode.</p>
+    </div>
   </div>
 
   <div class="release">
